@@ -1,0 +1,155 @@
+
+/* Slideshow container */
+section {
+    height: 100dvh;
+    width:100%;
+}
+
+.slideshow-container {
+    
+    position: relative;
+    margin: 20 0;
+    background-color:  #D3E75B;
+    z-index: 997;
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.prev,
+.next {
+    flex-basis: 15%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    width: auto;
+    padding: 20px; /* Adjust padding as needed */
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 1000;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* Hide the images by default */
+/* .mySlides {
+  display: none;
+}
+ */
+.mySlides {
+  display: flex;
+  flex-direction: row;
+  margin: 300px 300px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 90px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: #eeffb2cc;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.8s ease;
+  margin-bottom: 200px;
+}
+
+.active, .dot:hover {
+  background-color: #9f5da5;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
+.works-text {
+
+color: var(--Color-palette-neutral-black, #000);
+
+/* body-desktop-S */
+font-family: "Roboto Condensed";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 130%; /* 20.8px */
+text-align: left;
+padding-bottom: 20px;
+}
+
+
+
+
+
+.tags-container {
+  display: flex;
+  gap: 13px;
+  max-width: 100%;
+}
+
+.text-card {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 30px;
+
+}
+
+
+.tags {
+  display: flex;
+ 
+  align-items: center;
+  height: auto; /* Change height to auto */
+  padding: 7px 6px;
+  justify-content: space-between;
+  gap: 13px;
+  border: 2px solid #B066E3;
+  /* Remove or adjust max-width */
+}
+
+.tag-text {
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 20.8px */
+  justify-content: center;
+}
