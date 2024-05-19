@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 import '../styling/about.css';
 import '../../App.css';
 
-const AboutPage = () => {
+const About = () => {
   return (
     <section className="about-container">
       
@@ -27,4 +27,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default About;

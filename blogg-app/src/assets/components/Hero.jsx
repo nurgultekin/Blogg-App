@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css';
 
 const HeroSection = () => {
     useEffect(() => {
-        const selectedCases = document.getElementById("selected-cases");
+        const selectedCases = document.getElementById("our-features");
         const slideshowContainer = document.querySelector(".slideshow-container");
 
         const handleClick = () => {
@@ -36,11 +36,11 @@ const HeroSection = () => {
 
             <div>
                 <p className="hero-text text-white text-shadow font-semibold text-lg md:text-xl font-sans text-center max-w-3/4">
-                    I am <span className="name">Nur Gültekin</span>, a data-driven UX/UI designer & web developer who draws great inspiration from music, games, and literature. My passion is creating interactive technologies for optimal user experience and accessibility. I am currently on the look-out for a stimulating and fun workplace that would unleash my creativity and help me grow.</p>
+                    Welcome to <span className="name">Nur's Blogg App</span>, which is designed and developed to make her recruitment process smooth, and enable her references to write on her blogg for recruiters to see.</p>
             </div>
 
             <div className="selected-cases" id="selected-cases">
-                Selected Cases
+                Read more
                 <span className="arrow-down"></span>
             </div>
 

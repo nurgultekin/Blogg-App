@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavigationBar from './assets/components/NavBar';
 import AboutSection from './assets/components/AboutSection';
-import AboutPage from './assets/components/AboutPage';
+import TodoPage from './assets/components/Todos';
 import ContactSection from './assets/components/ContactSection';
 import HeroSection from './assets/components/Hero'; 
 import Animation from './assets/components/Animation';
@@ -11,6 +11,13 @@ import SkillsCredentials from './assets/components/Skills';
 import SideProjects from './assets/components/Sideprojects';
 import CaseStudySlider from './assets/components/CaseSlider';
 import Footer from './assets/components/Footer';
+import BlogList from "./blogg/BlogList";
+import BlogPost from "./blogg/BlogPost";
+import AddBlogPost from "./blogg/AddBlogPost";
+import SignIn from "./blogg/SignIn";
+import ProtectedRoute from "./blogg/ProtectedRoute";
+import { UserProvider } from "./blogg/UserContext";
+import { BlogProvider } from "./blogg/BlogContext";
 
 
 import 'tailwindcss/tailwind.css';
@@ -20,17 +27,30 @@ import './assets/styling/home.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <NavigationBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/todos" element={<TodoPage />} />
-        <Route path="/todos" element={<Blogg />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    
+    <UserProvider>
+    <BlogProvider>
+      <BrowserRouter>
+        <Animation></Animation>
+        <NavigationBar />
+        <Routes>
+          <Route path="/" element={<BlogList />} />
+          <Route path="/post/:id" element={<BlogPost />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/ContactSection" element={<ContactSection />} />
+          <Route
+            path="/add"
+            element={
+              <ProtectedRoute>
+                <AddBlogPost />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </BlogProvider>
+  </UserProvider>
+);
 };
 
 const Home = () => { 

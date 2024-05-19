@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import 'tailwindcss/tailwind.css';
-import '../styling/home.css'; // Adjust the import path as necessary
+import '../styling/home.css';
+import { useUser } from "../../blogg/UserContext";
 
 const NavigationBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isBlogMenuOpen, setIsBlogMenuOpen] = useState(false);
+    const { user } = useUser();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const toggleBlogMenu = () => {
+        setIsBlogMenuOpen(!isBlogMenuOpen);
     };
 
     const scrollToContact = () => {
@@ -56,10 +63,24 @@ const NavigationBar = () => {
                 <div className="nav-links">
                     <div className="menu">
                         <Link to="/AboutPage" className="text-white">About</Link>
-                        <Link to="/works" className="text-white">Works</Link>
-                        <Link to="/References" className="text-white">References</Link>
+                        <div className="relative">
+                            <button onClick={toggleBlogMenu} className="text-white">
+                                Blogg
+                            </button>
+                            {isBlogMenuOpen && (
+                                <div className="absolute bg-white text-black mt-2 rounded shadow-lg">
+                                    <Link to="/add" className="block px-4 py-2">Add Blog Post</Link>
+                                    <Link to="/" className="block px-4 py-2">View Blog Posts</Link>
+                                </div>
+                            )}
+                        </div>
                     </div>
-                    <button className="cta-button" onClick={scrollToContact}>Say Hi!</button>
+                    {user ? (
+                        <span className="text-white ml-4">{user.email}</span>
+                    ) : (
+                        <Link to="/signin" className="cta-button ml-4">Sign In</Link>
+                    )}
+                    <button className="cta-button ml-4" onClick={scrollToContact}>Say Hi!</button>
                 </div>
             </nav>
         </header>

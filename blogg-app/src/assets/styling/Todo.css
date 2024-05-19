@@ -1,0 +1,152 @@
+.todo-container {
+    
+    margin: 40px auto; /* Center the container horizontally by distributing the remaining space evenly between left and right margins  */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(161, 51, 97);
+    max-width: 800px; 
+    text-align: center; 
+    justify-content: center;
+
+  }
+
+  .todo-container ul {
+    list-style-type: none; /* Remove list bullet points */
+    padding: 0; 
+  }
+  
+  .todo-container li {
+    display:flex;
+    margin-bottom: 10px; /* should add margin between list items */
+    align-items: center;
+  }
+
+  
+  .todo-container input[type="text"] {
+    margin-bottom: 20px; /* Add space between input and button */
+    padding: 10px; 
+    border: none; 
+    border-radius: 10px; 
+    font-size: 16px; 
+
+}
+
+.todo-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transform: scale(1.2); /* Make the checkbox slightly bigger */
+}
+
+.todo-item .checkbox-label {
+  position: relative; /* Make the label a positioning context */
+}
+
+.todo-item .checkbox-label:hover::after {
+  content: "Mark as completed"; /* Text to display when hovering over the label */
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.todo-item span {
+  margin-right: 10px;
+}
+
+.todo-container button {
+    background-color: rgb(146, 192, 192);
+    width: 100px; 
+    height: 40px; 
+    margin-bottom: 20px; /* Add space between input and button */
+    padding: 10px; 
+    border: none; 
+    border-radius: 10px; 
+    font-family: "Roboto", sans-serif; 
+    font-size: 16px; 
+    cursor: pointer;
+    margin-left:1.1rem;
+}
+
+.todo-container button:hover {
+    background-color: rgb(215, 233, 227);
+    transition-duration: 0s 1s;
+}
+
+  .todo-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .todo-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    justify-content: space-between;
+    display:flex;
+    width:50%;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+
+  
+  .todo-item button {
+    margin-left: 10px;
+  }
+  
+  .clear-button {
+    margin-top: 10px;
+  }
+  
+  .delete-icon {
+    cursor: pointer;
+    color: red;
+    margin-left: 10rem; /* Add some space between the delete icon and the todo item */
+    font-size: 1.2rem;
+  
+  
+  }
+  
+  .delete-icon:hover {
+    color: rgb(82, 23, 23);
+  }
+
+  .delete-icon:hover::after {
+    content: "Remove"; /* Text to display when I hover over X */
+    position: absolute;
+    bottom: 25px; 
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem; 
+  }
+
+  /*Alert/message after all the tasks were completed or deleted*/
+
+  .message {
+    font-family: "Roboto";
+    font-size: 18px;
+    color:white;
+
+  }
+
+  .fade-in-animation {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 2;
+    }
+  }
