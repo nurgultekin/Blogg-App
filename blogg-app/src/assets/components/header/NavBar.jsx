@@ -11,7 +11,7 @@ const NavigationBar = () => {
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isBlogMenuOpen, setIsBlogMenuOpen] = useState(false);
+    const [isBlogMenuOpen, setIsBlogMenuOpen] = useState(false);    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
