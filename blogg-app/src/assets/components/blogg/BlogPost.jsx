@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { collection, doc, getDoc, getDocs, addDoc } from "firebase/firestore";
-import { db } from "../firebase";
-import { useUser } from "../blogg/UserContext";
+import { db } from "../../../firebase/firebase";
+import { useUser } from "./UserContext";
 
 const BlogPost = () => {
   const { id } = useParams();

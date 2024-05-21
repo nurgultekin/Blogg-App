@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useBlog } from "../blogg/BlogContext";
+import { useBlog } from "./BlogContext";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../../firebase/firebase";
 
 const BlogList = () => {
   const { posts, setPosts } = useBlog();

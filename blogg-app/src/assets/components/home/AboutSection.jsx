@@ -1,8 +1,8 @@
 import React from 'react';
-import GalataTower from "../media/images/galata.png";
+import GalataTower from "../../media/images/galata.png";
 import 'tailwindcss/tailwind.css';
-import '../styling/home.css';
-import '../../App.css';
+import '../../styling/home.css';
+import '../../../App.css';
 
 
 const AboutSection = () => {

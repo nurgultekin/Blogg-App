@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useUser } from "../blogg/UserContext";
-import { useBlog } from "../blogg/BlogContext";
+import { useUser } from "./UserContext";
+import { useBlog } from "./BlogContext";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "../../../firebase/firebase";
 
 const AddBlogPost = () => {
   const { user } = useUser();
