@@ -1,11 +1,11 @@
 import React from 'react';
-import '../../styling/home.css';
-import nurImage from '../../media/images/nurTree.png';
+import '../styling/home.css';
+import nurImage from '../../assets/media/images/nurTree.png';
 import 'tailwindcss/tailwind.css';
-import '../Contact.css';
-import Email from '../../media/images/email.png';
-import Github from '../../media/images/github.png';
-import Linkedin from '../../media/images/linkedin.png';
+import '../styling/Contact.css';
+import Email from '../../assets/media/images/email.png';
+import Github from '../../assets/media/images/github.png';
+import Linkedin from '../../assets/media/images/linkedin.png';
 
 const ContactSection = () => {
   return (

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { useUser } from "../blogg/UserContext";
-import { useBlog } from "../blogg/BlogContext";
+import { useUser } from "./UserContext";
+import { useBlog } from "./BlogContext";
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../firebase";
+
 
 const AddBlogPost = () => {
   const { user } = useUser();
@@ -17,11 +17,12 @@ const AddBlogPost = () => {
       text,
       author: user.email
     };
-    const docRef = await addDoc(collection(db, "posts"), newPost);
+    /* const docRef = await addDoc(collection(db, "posts"), newPost);
     setPosts((prevPosts) => [...prevPosts, { id: docRef.id, ...newPost }]);
     setTitle("");
     setText("");
-  };
+   */
+};
 
   return (
     <form onSubmit={handleSubmit}>

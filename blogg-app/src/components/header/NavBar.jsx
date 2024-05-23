@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../contexts/authContext";
-import BlogWrapper from "../blogg/BloggWrapper";
+import BlogWrapper from '../../blogg/BlogWrapper';
+import { useUser } from "../../blogg/UserContext";
 import { doSignOut } from "../../firebase/auth";
 
-
-
 const NavigationBar = () => {
-    const { userLoggedIn, signOut, signOutError } = useAuth();
+    const { user, signOut, signOutError } = useUser();
     const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -84,7 +82,7 @@ const NavigationBar = () => {
                     <button className="cta-button ml-4" onClick={scrollToContact}>Say Hi!</button>
                 </div>
             </nav>
-            {userLoggedIn ? (
+            {user ? (
                 <div className="BlogWrapper">
                     <BlogWrapper isLoggedIn={!!user} />
                 </div>

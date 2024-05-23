@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import '../../styling/blog.css';
+import '../components/styling/blog.css';
 import BlogList from './BlogList';
 import BlogPost from './BlogPost';
 import NurImg from "./nur.jpg";

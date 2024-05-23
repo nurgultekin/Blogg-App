@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import '../styling/home.css'; // Adjust the import path as necessary
-import arrowImage from '../media/images/arrow.png';
+import './styling/home.css'; // Adjust the import path as necessary
+import arrowImage from '.././assets/media/images/arrow.png';
+
 
 const Footer = () => {
   // Smooth scroll function

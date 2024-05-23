@@ -1,6 +1,6 @@
 // BackgroundAnimation.js
 import React, { useEffect } from 'react';
-import '/src/assets/styling/home.css';
+import './styling/home.css';
 
 const Animation = () => {
     useEffect(() => {

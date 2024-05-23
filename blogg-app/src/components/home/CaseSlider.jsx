@@ -2,14 +2,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import '../../styling/slider.css';
+import '../styling/slider.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import luxeBiteImage from "./luxeBite.png";
-import onspotImage from '../../media/images/onspot.png';
-import Kalmar from '../../media/images/kalmar.jpg';
-import Portfolio from '../../media/images/portfolio.jpg';
-import '../../../App.css';
+
+import luxeBiteImage from "../../assets/media/images/luxeBite.png";
+import onspotImage from '../../assets/media/images/onspot.png';
+import Kalmar from '../../assets/media/images/kalmar.jpg';
+import Portfolio from '../../assets/media/images/portfolio.jpg';
+import '../../App.css';
 
 
 
