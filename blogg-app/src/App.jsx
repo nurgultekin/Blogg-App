@@ -1,16 +1,13 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import NavigationBar from './assets/components/NavBar';
-import AboutSection from './assets/components/AboutSection';
-import TodoPage from './assets/components/Todos';
-import ContactSection from './assets/components/ContactSection';
-import HeroSection from './assets/components/Hero'; 
-import Animation from './assets/components/Animation';
-import SkillsCredentials from './assets/components/Skills';
-import SideProjects from './assets/components/Sideprojects';
-import CaseStudySlider from './assets/components/CaseSlider';
-import Footer from './assets/components/Footer';
+import NavigationBar from './components/header/NavBar';
+import AboutSection from './components/home/AboutSection';
+import ContactSection from './components/home/ContactSection';
+import HeroSection from './components/home/Hero'; 
+import Animation from './components/Animation';
+import CaseStudySlider from './components/home/CaseSlider';
+import Footer from './components/Footer';
 import BlogList from "./blogg/BlogList";
 import BlogPost from "./blogg/BlogPost";
 import AddBlogPost from "./blogg/AddBlogPost";
@@ -21,7 +18,7 @@ import { BlogProvider } from "./blogg/BlogContext";
 
 
 import 'tailwindcss/tailwind.css';
-import './assets/styling/home.css';
+import './components/styling/home.css';
 
 
 
